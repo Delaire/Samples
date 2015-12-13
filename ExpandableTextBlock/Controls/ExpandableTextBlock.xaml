@@ -10,8 +10,7 @@
     d:DesignWidth="400">
 
 
-    <Grid x:Name="LayoutRoot"  Tapped="LayoutRoot_OnTap"     >
-
+    <Grid x:Name="LayoutRoot"  Tapped="LayoutRoot_OnTap">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
@@ -27,6 +26,5 @@
             <TextBlock Margin="10,0,10,0"
 					Text="+" />
         </StackPanel>
-
     </Grid>
 </UserControl>

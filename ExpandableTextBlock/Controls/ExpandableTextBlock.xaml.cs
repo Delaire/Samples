@@ -20,6 +20,7 @@ namespace ExpandableTextBlock.Controls
 {
     public sealed partial class ExpandableTextBlock : UserControl
     {
+        public double MaxHeight { get; set; }
 
         public ExpandableTextBlock()
         {
@@ -34,9 +35,7 @@ namespace ExpandableTextBlock.Controls
             get { return (string)GetValue(TextProperty); }
             set { SetValue(TextProperty, value); }
         }
-
-        public double MaxHeight { get; set; }
-
+       
         private static void OnTextChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             var ctl = (ExpandableTextBlock)d;
