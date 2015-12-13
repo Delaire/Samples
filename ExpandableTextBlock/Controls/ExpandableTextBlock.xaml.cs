@@ -20,9 +20,7 @@ namespace ExpandableTextBlock.Controls
 {
     public sealed partial class ExpandableTextBlock : UserControl
     {
-        public double MaxHeight { get; set; }
-
-        public ExpandableTextBlock()
+       public ExpandableTextBlock()
         {
             this.InitializeComponent();
         }
@@ -78,6 +76,21 @@ namespace ExpandableTextBlock.Controls
             ctl.CollapsedHeight = (double)e.NewValue;
         }
 
+
+        public static readonly DependencyProperty TextStyleProperty = DependencyProperty.Register(
+           "TextStyle", typeof(Style), typeof(ExpandableTextBlock), new PropertyMetadata(default(Style), OnTextStyleChanged));
+
+        public Style TextStyle
+        {
+            get { return (Style)GetValue(TextStyleProperty); }
+            set { SetValue(TextStyleProperty, value); }
+        }
+
+        private static void OnTextStyleChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            var ctl = (ExpandableTextBlock)d;
+            ctl.CommentTextBlock.SetValue(StyleProperty, (Style)e.NewValue);
+        }
 
         private void LayoutRoot_OnTap(object sender, TappedRoutedEventArgs tappedRoutedEventArgs)
         {
