@@ -25,20 +25,6 @@ namespace ExpandableTextBlock.Controls
         {
             this.InitializeComponent();
         }
-        public static readonly DependencyProperty TextStyleProperty = DependencyProperty.Register(
-           "TextStyle", typeof(Style), typeof(ExpandableTextBlock), new PropertyMetadata(default(Style), OnTextStyleChanged));
-
-        public Style TextStyle
-        {
-            get { return (Style)GetValue(TextStyleProperty); }
-            set { SetValue(TextStyleProperty, value); }
-        }
-
-        private static void OnTextStyleChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
-        {
-            var ctl = (ExpandableTextBlock)d;
-            ctl.CommentTextBlock.SetValue(StyleProperty, (Style)e.NewValue);
-        }
 
         public static readonly DependencyProperty TextProperty = DependencyProperty.Register(
             "Text", typeof(string), typeof(ExpandableTextBlock), new PropertyMetadata(default(string), OnTextChanged));
