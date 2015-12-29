@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpandableTextBlock", "ExpandableTextBlock\ExpandableTextBlock.csproj", "{7E82D552-E02E-4D47-81FA-7492E56F801B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsAdMediationExample", "WindowsAdMediationExample\WindowsAdMediationExample.csproj", "{1887D5A8-1E89-4271-AE75-E0E4F6AC397B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
@@ -33,6 +35,24 @@ Global
 		{7E82D552-E02E-4D47-81FA-7492E56F801B}.Release|x86.ActiveCfg = Release|x86
 		{7E82D552-E02E-4D47-81FA-7492E56F801B}.Release|x86.Build.0 = Release|x86
 		{7E82D552-E02E-4D47-81FA-7492E56F801B}.Release|x86.Deploy.0 = Release|x86
+		{1887D5A8-1E89-4271-AE75-E0E4F6AC397B}.Debug|ARM.ActiveCfg = Debug|ARM
+		{1887D5A8-1E89-4271-AE75-E0E4F6AC397B}.Debug|ARM.Build.0 = Debug|ARM
+		{1887D5A8-1E89-4271-AE75-E0E4F6AC397B}.Debug|ARM.Deploy.0 = Debug|ARM
+		{1887D5A8-1E89-4271-AE75-E0E4F6AC397B}.Debug|x64.ActiveCfg = Debug|x64
+		{1887D5A8-1E89-4271-AE75-E0E4F6AC397B}.Debug|x64.Build.0 = Debug|x64
+		{1887D5A8-1E89-4271-AE75-E0E4F6AC397B}.Debug|x64.Deploy.0 = Debug|x64
+		{1887D5A8-1E89-4271-AE75-E0E4F6AC397B}.Debug|x86.ActiveCfg = Debug|x86
+		{1887D5A8-1E89-4271-AE75-E0E4F6AC397B}.Debug|x86.Build.0 = Debug|x86
+		{1887D5A8-1E89-4271-AE75-E0E4F6AC397B}.Debug|x86.Deploy.0 = Debug|x86
+		{1887D5A8-1E89-4271-AE75-E0E4F6AC397B}.Release|ARM.ActiveCfg = Release|ARM
+		{1887D5A8-1E89-4271-AE75-E0E4F6AC397B}.Release|ARM.Build.0 = Release|ARM
+		{1887D5A8-1E89-4271-AE75-E0E4F6AC397B}.Release|ARM.Deploy.0 = Release|ARM
+		{1887D5A8-1E89-4271-AE75-E0E4F6AC397B}.Release|x64.ActiveCfg = Release|x64
+		{1887D5A8-1E89-4271-AE75-E0E4F6AC397B}.Release|x64.Build.0 = Release|x64
+		{1887D5A8-1E89-4271-AE75-E0E4F6AC397B}.Release|x64.Deploy.0 = Release|x64
+		{1887D5A8-1E89-4271-AE75-E0E4F6AC397B}.Release|x86.ActiveCfg = Release|x86
+		{1887D5A8-1E89-4271-AE75-E0E4F6AC397B}.Release|x86.Build.0 = Release|x86
+		{1887D5A8-1E89-4271-AE75-E0E4F6AC397B}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
