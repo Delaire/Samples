@@ -1,0 +1,2 @@
+MainPackage=C:\Users\damie\Documents\GitHub\Template10\Templates (Project)\Hamburger\bin\ARM\Release\Hamburger_1.1.1.0_ARM.appx
+SymbolPackage=C:\Users\damie\Documents\GitHub\Template10\Templates (Project)\Hamburger\AppPackages\Hamburger_1.1.1.0_Test\Hamburger_1.1.1.0_ARM.appxsym
