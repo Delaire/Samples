@@ -1,17 +1,15 @@
-{ "version": 1,
+{
+  "version": 1,
   "IdArrays": [
-  {
-	  "index": 1,
-        "clientId": "fDoItMDbsbZz8dY16ZzARCZmzgHBPotA"  ,
-        "date" :"09212017"
-
-     },
-	 
-    { 
-	     "index": 2,
-        "clientId": "ygy2GkGPGW6Tn8m22Bz1SDplrFKBlwP0"    ,
-        "date" :"11072017"
-
-     }
-     ]
-	 }
+    {
+      "index": 1,
+      "clientId": "fDoItMDbsbZz8dY16ZzARCZmzgHBPotA",
+      "date": "09212017"
+    },
+    {
+      "index": 2,
+      "clientId": "ygy2GkGPGW6Tn8m22Bz1SDplrFKBlwP0",
+      "date": "11072017"
+    }
+  ]
+}
