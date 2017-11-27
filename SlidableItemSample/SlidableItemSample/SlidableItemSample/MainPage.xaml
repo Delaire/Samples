@@ -1,0 +1,51 @@
+﻿<Page
+    x:Class="SlidableItemSample.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:SlidableItemSample"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <GridView
+            x:Name="HorizontalGridView"
+            Height="410"
+            Margin="36,10,0,5"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            CanDragItems="False"
+            CanReorderItems="False"
+            FocusVisualPrimaryThickness="0"
+            FocusVisualSecondaryThickness="0"
+            IsItemClickEnabled="True"
+            IsSwipeEnabled="True"
+            IsTabStop="True"
+            ItemTemplate="{StaticResource KeyQueueSwipeTemplate}"
+            ScrollViewer.HorizontalScrollBarVisibility="Visible"
+            ScrollViewer.HorizontalScrollMode="Enabled"
+            ScrollViewer.IsHorizontalScrollChainingEnabled="True"
+            ScrollViewer.VerticalScrollBarVisibility="Disabled"
+            ScrollViewer.VerticalScrollMode="Disabled"
+            SelectionMode="None"
+            VirtualizingStackPanel.VirtualizationMode="Recycling"
+            Visibility="Visible">
+            <GridView.ItemContainerTransitions>
+                <TransitionCollection>
+                    <EntranceThemeTransition x:Name="EntranceTransition" />
+                </TransitionCollection>
+            </GridView.ItemContainerTransitions>
+
+            <GridView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <VariableSizedWrapGrid
+                        Margin="0,0,0,0"
+                        HorizontalAlignment="Left"
+                        ItemHeight="300"
+                        ItemWidth="300"
+                        Orientation="Horizontal" />
+                </ItemsPanelTemplate>
+            </GridView.ItemsPanel>
+        </GridView>
+    </Grid>
+</Page>

@@ -1,0 +1,64 @@
+﻿<Application
+    x:Class="SlidableItemSample.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SlidableItemSample.SlidableItem"
+    xmlns:slidableitemsample="using:SlidableItemSample"
+    RequestedTheme="Light">
+
+    <Application.Resources>
+
+
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/SlidableItem/SlidableGridItem.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+
+
+            <DataTemplate x:Key="KeyQueueSwipeTemplate">
+                <local:SlidableGridItem
+                    MinWidth="300"
+                    MaxWidth="300"
+                    HorizontalAlignment="Stretch"
+                    ActivationWidth="71"
+                    AllowDrop="True"
+                    BottomBackground="SkyBlue"
+                    BottomCommand="{Binding DataContext.CallBottomItemCommand, RelativeSource={RelativeSource TemplatedParent}}"
+                    BottomForeground="White"
+                    BottomIcon="Play"
+                    BottomLabel="Next"
+                    CanDrag="True"
+                    DataContext="{Binding DataContext, ElementName=Page, Mode=OneWay}"
+                    IsBottomCommandEnabled="True"
+                    IsOffsetLimited="False"
+                    IsPointerReleasedOnSwipingHandled="True"
+                    IsTopCommandEnabled="True"
+                    MouseSlidingEnabled="True"
+                    TopBackground="OrangeRed"
+                    TopCommand="{Binding DataContext.CallTopActionItemCommand, RelativeSource={RelativeSource TemplatedParent}}"
+                    TopForeground="White"
+                    TopIcon="Delete"
+                    TopLabel="Delete">
+                    <Grid Height="190" Background="LightGray">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+
+                        <slidableitemsample:MyUserControl
+                            Grid.Column="0"
+                            Margin="0,0,0,0"
+                            HorizontalAlignment="Stretch"
+                            VerticalAlignment="Stretch"
+                            AllowDrop="True"
+                            CanDrag="True"
+                            DataContext="{Binding DataContext, RelativeSource={RelativeSource TemplatedParent}}" />
+
+
+                    </Grid>
+                </local:SlidableGridItem>
+            </DataTemplate>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
