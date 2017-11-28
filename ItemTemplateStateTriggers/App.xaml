@@ -1,0 +1,64 @@
+﻿<Application
+    x:Class="ItemTemplateStateTriggers.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ItemTemplateStateTriggers"
+    RequestedTheme="Light">
+
+    <Application.Resources>
+        <ResourceDictionary>
+
+
+
+            <DataTemplate x:Key="KeyWideTemplate">
+                <Grid Height="270" Background="LightGray">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="200" />
+                        <RowDefinition Height="50" />
+                    </Grid.RowDefinitions>
+
+                    <Image
+                        Grid.Row="0"
+                        Width="200"
+                        Height="220"
+                        Source="{Binding ImagineUri}" />
+
+                    <TextBlock
+                        Grid.Row="1"
+                        Margin="20,0,20,0"
+                        VerticalAlignment="Center"
+                        Text="{Binding Title}" />
+
+                </Grid>
+            </DataTemplate>
+
+
+
+
+            <DataTemplate x:Key="KeyNarrowTemplate">
+                <Grid Height="270" Background="LightGray">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="250" />
+                        <ColumnDefinition Width="280" />
+                    </Grid.ColumnDefinitions>
+
+                    <Image
+                        Grid.Column="0"
+                        Width="250"
+                        Height="250"
+                        Source="{Binding ImagineUri}" />
+
+                    <TextBlock
+                        Grid.Column="1"
+                        Margin="20,0,20,0"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Text="{Binding Title}"
+                        TextWrapping="Wrap" />
+
+                </Grid>
+            </DataTemplate>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

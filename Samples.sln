@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2008
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpandableTextBlock", "ExpandableTextBlock\ExpandableTextBlock.csproj", "{7E82D552-E02E-4D47-81FA-7492E56F801B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsAdMediationExample", "WindowsAdMediationExample\WindowsAdMediationExample.csproj", "{1887D5A8-1E89-4271-AE75-E0E4F6AC397B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ItemTemplateStateTriggers", "ItemTemplateStateTriggers\ItemTemplateStateTriggers.csproj", "{DD93EDDC-4775-47F6-AADF-12C74F27EEA8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,8 +55,29 @@ Global
 		{1887D5A8-1E89-4271-AE75-E0E4F6AC397B}.Release|x86.ActiveCfg = Release|x86
 		{1887D5A8-1E89-4271-AE75-E0E4F6AC397B}.Release|x86.Build.0 = Release|x86
 		{1887D5A8-1E89-4271-AE75-E0E4F6AC397B}.Release|x86.Deploy.0 = Release|x86
+		{DD93EDDC-4775-47F6-AADF-12C74F27EEA8}.Debug|ARM.ActiveCfg = Debug|ARM
+		{DD93EDDC-4775-47F6-AADF-12C74F27EEA8}.Debug|ARM.Build.0 = Debug|ARM
+		{DD93EDDC-4775-47F6-AADF-12C74F27EEA8}.Debug|ARM.Deploy.0 = Debug|ARM
+		{DD93EDDC-4775-47F6-AADF-12C74F27EEA8}.Debug|x64.ActiveCfg = Debug|x64
+		{DD93EDDC-4775-47F6-AADF-12C74F27EEA8}.Debug|x64.Build.0 = Debug|x64
+		{DD93EDDC-4775-47F6-AADF-12C74F27EEA8}.Debug|x64.Deploy.0 = Debug|x64
+		{DD93EDDC-4775-47F6-AADF-12C74F27EEA8}.Debug|x86.ActiveCfg = Debug|x86
+		{DD93EDDC-4775-47F6-AADF-12C74F27EEA8}.Debug|x86.Build.0 = Debug|x86
+		{DD93EDDC-4775-47F6-AADF-12C74F27EEA8}.Debug|x86.Deploy.0 = Debug|x86
+		{DD93EDDC-4775-47F6-AADF-12C74F27EEA8}.Release|ARM.ActiveCfg = Release|ARM
+		{DD93EDDC-4775-47F6-AADF-12C74F27EEA8}.Release|ARM.Build.0 = Release|ARM
+		{DD93EDDC-4775-47F6-AADF-12C74F27EEA8}.Release|ARM.Deploy.0 = Release|ARM
+		{DD93EDDC-4775-47F6-AADF-12C74F27EEA8}.Release|x64.ActiveCfg = Release|x64
+		{DD93EDDC-4775-47F6-AADF-12C74F27EEA8}.Release|x64.Build.0 = Release|x64
+		{DD93EDDC-4775-47F6-AADF-12C74F27EEA8}.Release|x64.Deploy.0 = Release|x64
+		{DD93EDDC-4775-47F6-AADF-12C74F27EEA8}.Release|x86.ActiveCfg = Release|x86
+		{DD93EDDC-4775-47F6-AADF-12C74F27EEA8}.Release|x86.Build.0 = Release|x86
+		{DD93EDDC-4775-47F6-AADF-12C74F27EEA8}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BF7D0681-A0C7-4B53-920E-BBA1E45D3040}
 	EndGlobalSection
 EndGlobal
