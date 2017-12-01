@@ -1,0 +1,25 @@
+﻿<Page
+    x:Class="NewShellDm.Pages.BlueView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:NewShellDm.Pages"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="Blue">
+        <StackPanel
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Background="DarkGray">
+            <Button
+                Margin="30"
+                Click="ButtonBase_1OnClick"
+                Content="Page 1"
+                IsEnabled="True" />
+            <Button Click="ButtonBase_2OnClick" Content="Page 2" />
+
+        </StackPanel>
+
+    </Grid>
+</Page>
