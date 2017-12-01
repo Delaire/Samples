@@ -32,25 +32,13 @@ namespace NewShellDm
     public sealed partial class Shell : Page
     {
         public static Shell Current { get; private set; }
-
-        private bool _isPaneOpen;
         private NavViewModel _currentSample;
-
-        private bool _hamburgerMenuClosing = false;
-
-
-        private float _defaultShowAnimationDuration = 300;
-        //  private XamlRenderService _xamlRenderer = new XamlRenderService();
-        private bool _lastRenderedProperties = true;
-        private ThreadPoolTimer _autocompileTimer;
-        private bool _xamlCodeRendererSupported = false;
         private List<NavViewModel> NavigationViews { get; set; }
 
 
         public Shell()
         {
             this.InitializeComponent();
-
             Current = this;
         }
 
