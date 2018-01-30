@@ -95,7 +95,6 @@ namespace NewShellDm
                 {
                     //fail in silence
                 }
-
             }
         }
 
