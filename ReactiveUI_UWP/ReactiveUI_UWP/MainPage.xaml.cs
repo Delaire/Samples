@@ -26,15 +26,6 @@ namespace ReactiveUI_UWP
         public MainPage()
         {
             this.InitializeComponent();
-
-            Loaded += MainPage_Loaded;
         }
-
-        
-
-        private void MainPage_Loaded(object sender, RoutedEventArgs e)
-        {
-            
-    }
     }
 }
