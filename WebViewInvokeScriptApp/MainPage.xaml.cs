@@ -45,7 +45,7 @@ namespace WebViewInvokeScriptApp
             builder.Append(string.Format("('{0}'", param)) ;
             builder.Append(string.Format(",JSON.parse('{0}'))", dataJson));           
 
-            //call js
+            //call webview
             CallEvalWebviewMethod(builder.ToString());
         }
 
