@@ -42,10 +42,8 @@ namespace WebViewInvokeScriptApp
             StringBuilder builder = new StringBuilder();
             builder.Append("myJSObject.");
             builder.Append(method);
-            builder.Append('(');
-            builder.Append("'" + param + "'");
-            builder.Append(",JSON.parse('" + dataJson + "')");
-            builder.Append(')');
+            builder.Append(string.Format("('{0}'", param)) ;
+            builder.Append(string.Format(",JSON.parse('{0}'))", dataJson));           
 
             //call js
             CallEvalWebviewMethod(builder.ToString());
