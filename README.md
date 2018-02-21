@@ -7,3 +7,10 @@ For now you can find:
 - WebViewCommunication
 - WindowsAdMediationExample
 - SlidableItem
+- CustomTemplate10 
+- DemoShell	 
+- DoubleListViewItemTemplates	
+- ItemTemplateStateTriggers	
+- ReactiveUI_UWP	
+- WebViewInvokeScriptApp	
+- LoadingStateSample
