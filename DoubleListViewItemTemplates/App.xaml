@@ -1,0 +1,36 @@
+﻿<Application
+    x:Class="DoubleListViewItemTemplates.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DoubleListViewItemTemplates"
+    xmlns:segement="using:DoubleListViewItemTemplates.Controls"
+    xmlns:templateSelector="using:DoubleListViewItemTemplates.TemplateSelector"
+    xmlns:pageViewModel="using:DoubleListViewItemTemplates.PageViewModel"
+    RequestedTheme="Light">
+    <Application.Resources>
+        <ResourceDictionary>
+            <pageViewModel:ViewModelLocator x:Key="Locator" />
+
+
+            <templateSelector:SegementTemplateSelector x:Key="KeySegementTemplateSelector" />
+            <templateSelector:ItemTemplateSelector x:Key="KeyItemTemplateSelector" />
+
+            <DataTemplate x:Key="KeyHorizontalControl">
+                <segement:HorizontalControl />
+            </DataTemplate>
+
+            <DataTemplate x:Key="KeyVerticalControl">
+                <segement:VerticalControl />
+            </DataTemplate>
+
+            <DataTemplate x:Key="KeyCircleUserControl">
+                <segement:CircleUserControl />
+            </DataTemplate>
+
+            <DataTemplate x:Key="KeySquareUserControl">
+                <segement:SquareUserControl />
+            </DataTemplate>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
