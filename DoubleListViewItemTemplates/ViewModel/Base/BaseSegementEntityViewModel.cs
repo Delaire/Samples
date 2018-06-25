@@ -33,8 +33,6 @@ namespace DoubleListViewItemTemplates
 
         public void RaisePropertyChanged<T>(Expression<Func<T>> property)
         {
-            //TODO:IMPROVE
-            //var name = property.Name;
             var data = GetPropertyName(property);
             RaisePropertyChanged(data);
         }

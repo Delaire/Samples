@@ -10,7 +10,7 @@
     mc:Ignorable="d">
 
     <GridView
-        x:Name="HorizontalGridView"
+        x:Name="VerticalGridView"
         Width="300"
         Margin="26,0,0,0"
         HorizontalAlignment="Stretch"
@@ -27,15 +27,5 @@
         ShowsScrollingPlaceholders="False"
         VirtualizingStackPanel.VirtualizationMode="Standard"
         Visibility="Visible">
-
-
-        <GridView.ItemsPanel>
-            <ItemsPanelTemplate>
-                <VariableSizedWrapGrid
-                    Margin="5"
-                    HorizontalAlignment="Left"
-                    Orientation="Horizontal" />
-            </ItemsPanelTemplate>
-        </GridView.ItemsPanel>
     </GridView>
 </UserControl>
