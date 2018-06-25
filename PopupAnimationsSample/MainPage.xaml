@@ -14,8 +14,14 @@
         <Storyboard x:Name="PopInStoryboard">
             <PopInThemeAnimation
                 FromVerticalOffset="150"
-                SpeedRatio="1"
+                SpeedRatio="0.3"
                 TargetName="GridPopup" />
+            <DoubleAnimation
+                d:IsOptimized="True"
+                Storyboard.TargetName="GridPopup"
+                Storyboard.TargetProperty="Opacity"
+                To="1"
+                Duration="0" />
         </Storyboard>
     </Page.Resources>
     <Grid>
@@ -55,7 +61,8 @@
             Height="90"
             Margin="20,0,20,20"
             VerticalAlignment="Bottom"
-            Background="LightGray" />
+            Background="LightGray"
+            Opacity="0" />
 
         <Popup
             x:Name="PopupFromBottom"
