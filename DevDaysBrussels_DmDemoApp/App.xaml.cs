@@ -51,6 +51,8 @@ namespace DmDemoApp
                 ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
                 //size of your app on the xbox
                 ApplicationView.PreferredLaunchViewSize = new Size(960, 540);
+
+                this.RequiresPointerMode = Windows.UI.Xaml.ApplicationRequiresPointerMode.WhenRequested;
             }
             else
             {

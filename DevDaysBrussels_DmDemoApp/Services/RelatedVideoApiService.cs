@@ -9,7 +9,6 @@ namespace DmDemoApp.Services
 {
     public class RelatedVideoApiService
     {
-        //x5mscur
         private const string relatedApiCAll = "https://api.dailymotion.com/video/{0}/related?fields=channel.name,id,thumbnail_url,title,owner.username";
         public async Task<ObservableCollection<VideoItemViewModel>> GetRelatedVideosByVideoId(string xid)
         {
