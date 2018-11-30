@@ -92,15 +92,12 @@ namespace DmDemoApp.Views
         {
             var parameters = new Dictionary<string, string>();
 
-
             parameters["auto"] = "true";
 
             if (App.IsXbox)
                 parameters["controls"] = "0";
             else
                 parameters["controls"] = "1";
-
-
 
             //init
             dmPlayerController = new DMPlayerController();
@@ -122,7 +119,6 @@ namespace DmDemoApp.Views
         private async Task LoadVideo(string videoId = "xl1km0")
         {
             var parameters = new Dictionary<string, string>();
-
 
             parameters["autoplay"] = "true";
 
