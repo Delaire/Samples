@@ -107,6 +107,7 @@
     <Compile Include="Controls\VerticalControl.xaml.cs">
       <DependentUpon>VerticalControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\ListViewBaseExtension.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
