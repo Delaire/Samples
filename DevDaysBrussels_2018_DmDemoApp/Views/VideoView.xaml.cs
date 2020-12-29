@@ -1,5 +1,6 @@
 ﻿using DmDemoApp.ViewModels.EntityViewModels;
 using DmDemoApp.ViewModels.PageViewModels;
+using DmVideoPlayer;
 using DMVideoPlayer;
 using System;
 using System.Collections.Generic;
@@ -30,7 +31,7 @@ namespace DmDemoApp.Views
     {
         public VideoPageViewModel ViewModel => this.DataContext as VideoPageViewModel;
         public string VideoId { get; set; }
-        public static DMPlayerController dmPlayerController;
+        public static DmPlayerController dmPlayerController;
         public VideoView()
         {
             this.InitializeComponent();
@@ -100,7 +101,7 @@ namespace DmDemoApp.Views
                 parameters["controls"] = "1";
 
             //init
-            dmPlayerController = new DMPlayerController();
+            dmPlayerController = new DmPlayerController();
 
             var accessToken = "";// "myAccessToken";
 

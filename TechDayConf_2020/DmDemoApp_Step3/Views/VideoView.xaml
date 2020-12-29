@@ -1,0 +1,110 @@
+﻿<Page
+    x:Class="DmDemoApp.Views.VideoView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:developerTools="using:Microsoft.Toolkit.Uwp.DeveloperTools"
+    xmlns:local="using:DmDemoApp.Views"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:DmDemoApp.ViewModels.PageViewModels"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    mc:Ignorable="d">
+
+    <Page.DataContext>
+        <vm:VideoPageViewModel />
+    </Page.DataContext>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="250" />
+        </Grid.RowDefinitions>
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <RepositionThemeTransition />
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+
+        <Grid
+            x:Name="MyPlayerGrid"
+            Grid.Row="0"
+            MinWidth="200"
+            MinHeight="100"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch">
+            <Grid.ChildrenTransitions>
+                <TransitionCollection>
+                    <RepositionThemeTransition />
+                </TransitionCollection>
+            </Grid.ChildrenTransitions>
+        </Grid>
+
+
+        <Button
+            x:Name="MyPlayerWebBtn"
+            Grid.Row="0"
+            Margin="0,0,0,0"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            IsTabStop="True">
+            <Button.Content>
+                <Grid
+                    x:Name="MyPlayerGrid"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch">
+                    <Grid.ChildrenTransitions>
+                        <TransitionCollection>
+                            <RepositionThemeTransition />
+                        </TransitionCollection>
+                    </Grid.ChildrenTransitions>
+                </Grid>
+            </Button.Content>
+        </Button>
+
+
+        <GridView
+            x:Name="HorizontalGridView"
+            Grid.Row="1"
+            Height="250"
+            Margin="36,10,0,5"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            FocusVisualPrimaryThickness="0"
+            FocusVisualSecondaryThickness="0"
+            IsItemClickEnabled="True"
+            IsSwipeEnabled="True"
+            IsTabStop="True"
+            ItemClick="HorizontalGridView_OnItemClick"
+            ItemTemplate="{StaticResource FixedVideoItemTemplate}"
+            ItemsSource="{Binding DataVideoItemsSource}"
+            ScrollViewer.HorizontalScrollBarVisibility="Visible"
+            ScrollViewer.HorizontalScrollMode="Enabled"
+            ScrollViewer.IsHorizontalScrollChainingEnabled="False"
+            ScrollViewer.VerticalScrollBarVisibility="Disabled"
+            ScrollViewer.VerticalScrollMode="Disabled"
+            SelectionMode="Single"
+            VirtualizingStackPanel.VirtualizationMode="Recycling"
+            Visibility="Visible">
+            <GridView.ItemContainerTransitions>
+                <TransitionCollection>
+                    <EntranceThemeTransition x:Name="EntranceTransition" />
+                </TransitionCollection>
+            </GridView.ItemContainerTransitions>
+            <GridView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <ItemsWrapGrid
+                        Margin="0"
+                        HorizontalAlignment="Left"
+                        Orientation="Vertical" />
+                </ItemsPanelTemplate>
+            </GridView.ItemsPanel>
+        </GridView>
+
+
+        <developerTools:FocusTracker
+            HorizontalAlignment="Right"
+            VerticalAlignment="Bottom"
+            IsActive="True" />
+    </Grid>
+</Page>

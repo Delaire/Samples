@@ -1,0 +1,75 @@
+﻿<Page
+    x:Class="DmDemoApp.Views.MainView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:DmDemoApp.Views"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:stateTriggers="using:DmDemoApp.Helpers"
+    xmlns:vm="using:DmDemoApp.ViewModels.PageViewModels"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    mc:Ignorable="d">
+
+    <Page.DataContext>
+        <vm:MainPageViewModel />
+    </Page.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="55" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid
+            Grid.Row="0"
+            Height="50"
+            Background="{StaticResource AppBlueBrush}">
+            <TextBlock
+                x:Name="Header"
+                Margin="25,0,0,0"
+                VerticalAlignment="Center"
+                Foreground="{StaticResource White-Brush}"
+                Style="{StaticResource TitleTextBlockStyle}"
+                Text="Explore trending videos" />
+        </Grid>
+
+
+        <controls:AdaptiveGridView
+            x:Name="MyAdaptiveGridView"
+            Grid.Row="1"
+            MinWidth="500"
+            MinHeight="500"
+            Margin="15"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            DesiredWidth="450"
+            IsItemClickEnabled="True"
+            ItemClick="GridView_ItemClick"
+            ItemTemplate="{StaticResource FixedHeightVideoItemTemplate}"
+            ItemsSource="{Binding DataVideoItemsSource, Mode=OneWay}"
+            SelectionMode="Single" />
+
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup">
+                <VisualState x:Name="VisualStateNarrow">
+                    <VisualState.StateTriggers>
+                        <stateTriggers:DeviceFamilyStateTrigger x:Name="VisualStateNarrowTrigger" DeviceFamily="Xbox" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="MyAdaptiveGridView.DesiredWidth" Value="450" />
+                    </VisualState.Setters>
+                </VisualState>
+
+                <VisualState x:Name="VisualStateNormal">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger x:Name="VisualStateNormalTrigger" MinWindowWidth="{StaticResource NormalMinWidthAdaptive}" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="MyAdaptiveGridView.DesiredWidth" Value="300" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+    </Grid>
+</Page>
